@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[by@8pockets]]></title>
-  <link href="http://8pockets.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Other | by@8pockets]]></title>
+  <link href="http://8pockets.github.io/blog/categories/other/atom.xml" rel="self"/>
   <link href="http://8pockets.github.io/"/>
   <updated>2014-12-15T23:53:41+09:00</updated>
   <id>http://8pockets.github.io/</id>
@@ -22,35 +22,30 @@
 
 <h1>コードスニペット</h1>
 
-<figure class='code'><figcaption><span>class sample</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">MyClass</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">initializer</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="ruby class sample">class MyClass
+    def initializer
+    end
+end
+</code></pre>
 
 <h1>gistを埋め込める</h1>
 
-<div><script src='https://gist.github.com/9109720.js'></script>
+<p><div><script src='https://gist.github.com/9109720.js'></script>
 <noscript><pre><code>;; t.co -&gt; regular url replacer
 (defun untco ()
   (interactive)
   (let ((tco (buffer-substring (region-beginning) (region-end))))
     (setq resolv (replace-regexp-in-string &quot;\n+$&quot; &quot;&quot; (shell-command-to-string (format &quot;curl -s -I %s |awk \&#39;$1~/[lL]ocation/{print $2}\&#39;&quot; tco))))
     (if (&gt; (length resolv) 0)
-    (progn
-      (kill-region (region-beginning) (region-end))
-      (insert resolv)))))
+	(progn
+	  (kill-region (region-beginning) (region-end))
+	  (insert resolv)))))
 </code></pre></noscript></div>
-
+</p>
 
 <h1>画像埋め込み</h1>
 
-<p><img class="left" src="http://placekitten.com/320/250" title="Place Kitten #2" ></p>
+<p><img class="left <a" src="href="http://placekitten.com/320/250">http://placekitten.com/320/250</a>&#8221; title=&#8221;Place Kitten #2&#8221; ></p>
 ]]></content>
   </entry>
   
